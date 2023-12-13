@@ -1,8 +1,4 @@
-//this is not done yet
-//escape command syntax: \x1b[<command>m<text>\x1b[0m
-//yes i know it looks incorrect but it works, and yes the "m" is ment to be there
-
-export let printProsccesedText = (text, continueWithoutEnding) => { //function you run when calling the api, if continueWithoutEnding then the commands arnt told to stop, like ever (try it out)
+export let printProsscedString = (text, continueWithoutEnding) => { //function you run when calling the api, if continueWithoutEnding then the commands arnt told to stop, like ever (try it out)
     if(!continueWithoutEnding){
         text += "\x1b[0m";}
     console.log(text);
@@ -11,6 +7,10 @@ export let getProsssedString = (text, continueWithoutEnding) => {  //same as pri
     if(!continueWithoutEnding){
         text += "\x1b[0m";}
     return text
+}
+//misc
+export let errorNoise = () => {
+    console.log("\x07")
 }
 //text formating
 export let reset = "\x1b[0m";
@@ -42,7 +42,6 @@ export let unOverlined = "\x1b[55m";
 export let superScript = "\x1b[73m"; //coulnt get this to work
 export let subScript = "\x1b[74m"; //or this
 export let unScript = "\x1b[75m"; //and therefor this
-
 //whats an "ideogram" i dont know but im gonna add it anyway even though they dont work for my terminal
 export let iUoRSL = "\x1b[60m"
 export let iDUoDRSL = "\x1b[61m"
@@ -50,7 +49,6 @@ export let iOoLSL = "\x1b[62m"
 export let iDOoDLSL = "\x1b[63m"
 export let iSM = "\x1b[64m"
 export let unIdeogram = "\x1b[65m"
-
 //format colours
 export let underlineColour = (r, g, b) => {
     return `\x1b[58;2;${r};${g};${b}m`; //doesnt work for me
@@ -105,4 +103,4 @@ export let RGB = (r, g, b) => { //works out text rgb commands
 export let BRGB = (r, g, b) => { //works out backround rgb commands
     return `\x1b[48;2;${r};${g};${b}m`; //wow this also looks awful
 }
-printProsccesedText(`${overlined}Hello ${unOverlined}World!`);
+console.log(errorNoise)
