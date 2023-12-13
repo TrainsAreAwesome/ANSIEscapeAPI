@@ -1,0 +1,11 @@
+{
+  "name": "ansiescapeapi",
+  "version": "1.0.0",
+  "description": "An easier way to use the ANSI Escape Codes within NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "TrainsAreAwesome aka Mwgie",
+  "license": "MIT"
+}
